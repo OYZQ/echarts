@@ -1,0 +1,23 @@
+{
+  "id": "1567049",
+  "name": "事件看板",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "3083540",
+      "name": "交叉箭头",
+      "font_class": "jiaochajiantou",
+      "unicode": "e616",
+      "unicode_decimal": 58902
+    },
+    {
+      "icon_id": "6068572",
+      "name": "点",
+      "font_class": "dian",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    }
+  ]
+}
