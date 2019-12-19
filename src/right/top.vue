@@ -1,8 +1,8 @@
 <template lang="html">
   <div class="r_top">
     <p class="t_title">事态、事件和变更情况</p>
-    <p class="t_des">State of affairs, events and changes</p>
-    <div id="Rtchart" :style="{width: '620px', height: '190px'}"></div>
+    <!-- <p class="t_des">State of affairs, events and changes</p> -->
+    <div id="Rtchart" :style="{width: '920px', height: '250px'}"></div>
   </div>
 </template>
 
@@ -25,13 +25,10 @@
                   }
               }
             },
+            color:['#f5675d','#5fbdb7','#6984E3'],   
             legend: {
-              data:['邮件营销','联盟广告','视频广告']
-            },
-            toolbox: {
-                feature: {
-                    saveAsImage: {}
-                }
+              data:['事态','事件','变更情况'],
+              show:false
             },
             grid: {
               left: '5%',
@@ -131,16 +128,15 @@
         width: 100%;
         border-bottom: #ffffff solid 1px;
         border:1px solid #01709B;
-        border-radius: 50px;
+        // border-radius: 50px;
         box-shadow: 0px 0px 20px rgb(37, 164, 214) inset; 
-        margin: 15px 0;
+        margin: 25px 0;
         text-align: center;
         .t_title{
           padding: 10px;
           padding-bottom: 0px;
+          color: #fff;
           font-size: 18px;
-          color: #E5E3DA;
-          font-weight: 1000;
         }
         .t_des{
           font-size: 12px;

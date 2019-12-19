@@ -1,8 +1,8 @@
 <template lang="html">
   <div class="r_conter">
     <p class="r_today">各状态事件数量</p>
-    <p class="r_event">Number of events in each status<p/>
-    <div id="rcChart" :style="{width: '650px', height: '220px'}"></div>
+    <!-- <p class="r_event">Number of events in each status<p/> -->
+    <div id="rcChart" :style="{width: '950px', height: '250px'}"></div>
   </div>
 </template>
 
@@ -21,7 +21,7 @@
               grid:[
                 {
                 x: '5%',
-                y: '10%',
+                y: '0%',
 
                 }
               ],
@@ -32,8 +32,8 @@
                   },
                   axisLabel:{
                   textStyle: {
-                      fontSize:'14px',
-                      color: '#564E4A',
+                      fontSize:13,
+                      color: '#ffffff',
                   },
                   interval:'0',
                   //坐标轴刻度标签的相关设置。
@@ -79,7 +79,7 @@
                 show:false,
                   axisLabel:{
                   textStyle: {
-                      color: '#ffffff'
+                      color: '#ffffff',
                   },
                   interval:'0'
                 },
@@ -93,14 +93,14 @@
                   normal: {
                       // 定制显示（按顺序）
                       color: function(params) { 
-                          var colorList = ['#333333','#ED3333','#FE9E00','#619505','#1A7BA4','#7E3994','#8A3A66','#74746F']; 
+                          var colorList = ['#f5675d','#5fbdb7','#6984E3','#619505','#1A7BA4','#7E3994','#8A3A66','#74746F']; 
                           return colorList[params.dataIndex] 
                       },
                       label: {
                         show: true, //开启显示
                         position: 'top', //在上方显示
                         textStyle: { //数值样式
-                            color: '#5D524D',
+                            color: '#ffffff',
                             fontSize: 12
                         }
                       }
@@ -118,14 +118,15 @@
         box-sizing: border-box;
         width: 100%;
         color: #ffffff;
+        margin-top: 10px;
         padding:10px 10px;
         border:1px solid #01709B;
-        border-radius: 50px;
+        // border-radius: 50px;
         box-shadow: 0px 0px 20px rgb(37, 164, 214) inset; 
         text-align: center;
         .r_today{
           color: #fff;
-          font-size: 15px;
+          font-size: 18px;
         }
         .r_event{
           color:rgb(167, 157, 140);

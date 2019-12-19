@@ -1,5 +1,7 @@
 <template>
     <div id="app">
+      <div class="bg"></div>
+      <div>
         <div class="headerclound">
           <header2/>
         </div>
@@ -8,6 +10,7 @@
           <right/>
           <center/>
         </div>
+      </div>
     </div>
 </template>
 
@@ -38,11 +41,9 @@
     #app {
         font-family: "Avenir", Helvetica, Arial, sans-serif;
         h1 {color: black;}
-        background: #000C22;
         height: 100vh;
         box-sizing: border-box;
         .headerclound{
-          background: #000C22;
           padding: 20px;
         }
         .app_content{
@@ -50,8 +51,24 @@
           align-items: center;
           box-sizing: border-box;
           justify-content:space-between;
-          background: #000C22;
         }
+    }
+    .bg{
+      width:100vw;
+      height: 100vh;
+      background-repeat:no-repeat;
+      background-size:cover;
+      -webkit-filter:blur(15px);
+      -moz-filter:blur(15px);
+      -o-filter:blur(15px);
+      -ms-filter:blur(15px);
+      filter:blur(15px);
+      position:absolute;
+      left:0;
+      top:0;
+      background-image: url('./static/img/图片6.jpg');
+      filter: blur(5px);
+      z-index: -1;
     }
 
 </style>

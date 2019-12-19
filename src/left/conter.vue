@@ -1,8 +1,8 @@
 <template lang="html">
   <div class="h_conter">
     <p class="h_today">事件积压</p>
-    <p class="h_event">The backing of incidents<p/>
-    <div id="myChart" :style="{width: '460px', height: '200px'}"></div>
+    <!-- <p class="h_event">The backing of incidents<p/> -->
+    <div id="myChart" :style="{width: '740px', height: '150px'}"></div>
   </div>
 </template>
 
@@ -25,37 +25,37 @@
                   }
                 }
               },
-          grid: [ //指定坐标轴位置，大小
-            {
-                x: '7%',
-                y: '30%',
-                width: '50%',
-                height: '55%'
-            },{
-                height: '40%'
-            }//关系图位置
-        ],
-              xAxis: {
-                splitLine:{
-                  show:false
-                },
-                data: ["已超期","流逝75%","流逝50%","还好"],
-                axisLabel:{
-                  textStyle: {
-                      color: '#ffffff'
-                  },
-                  interval:'0'
-                },
-                boundaryGap:false,
+            grid: [ //指定坐标轴位置，大小
+              {
+                  x: '7%',
+                  y: '25%',
+                  width: '50%',
+                  height: '55%'
+              }
+            ],
+            xAxis: {
+              splitLine:{
+                show:false
               },
-              yAxis: {
-                splitLine:{
-                  show:false
+              data: ["已超期","流逝75%","流逝50%","还好"],
+              axisLabel:{
+                textStyle: {
+                    color: '#ffffff',
+                    fontSize: 16
                 },
-                show:false,
-                max:100
+                interval:'0'
               },
-              series: [{
+              boundaryGap:false,
+            },
+            yAxis: {
+              splitLine:{
+                show:false
+              },
+              show:false,
+              max:100
+            },
+            series: [
+                {
                   name: '销量',
                   type: 'bar',
                   data: [5, 4, 0,46],
@@ -64,80 +64,50 @@
                   normal: {
                       // 定制显示（按顺序）
                       color: function(params) { 
-                          var colorList = ['#333333','#ED3333','#FE9E00','#619505']; 
+                          var colorList = ['#F5675D','#EDDC49','#72CB6F','#5FBDB7']; 
                           return colorList[params.dataIndex] 
                       },
                       label: {
                         show: true, //开启显示
                         position: 'top', //在上方显示
                         textStyle: { //数值样式
-                            color: '#5D524D',
-                            fontSize: 12
+                            color: '#bbbbbb',
+                            fontSize: 14
                         }
                       }
                     },
                   },
                   markPoint : {
-                    data : [
-                        { 
-                      value : '黑单',xAxis: 0,yAxis: 20,
-                      itemStyle: {
-                        color:'#333333'
-                      }
-                    },
-                        { 
-                      value : '红单', xAxis: 1, yAxis: 19,
-                      itemStyle: {
-                        color:'#ED3333'
-                      }
-                    },
-                        { 
-                      value : '黄单', xAxis: 2, yAxis: 15,
-                      itemStyle: {
-                        color:'#FE9E00'
-                      }
-                    },
-                        { 
-                            value : '青单', xAxis: 3, yAxis: 61,
-                            itemStyle: {
-                              color:'#619505'
-                            }
-                          },
-                    ],
-                    symbol:'pin',
-                  },
-              },{
-            name:'访问来源',
-            type:'pie',
-            radius: ['20%', '50%'],
-            avoidLabelOverlap: false,
-            center: ['75%', '60%'],//饼图位置控制
-            label: {
-                normal: {
-                    show: false,
-                    position: 'center'
+              data : [
+               { 
+                  value : '红单',xAxis: 0,yAxis: 5+24,
+                  itemStyle: {
+                    color:'#F5675D'
+                  }
                 },
-                emphasis: {
-                    show: true,
-                    textStyle: {
-                        fontSize: '20',
-                        fontWeight: 'bold'
-                    }
-                }
-            },
-            labelLine: {
-                normal: {
-                    show: false
-                }
-            },
-            data:[
-                {value:5, name:'已超期',itemStyle: {color:'#333333'}},
-                {value:4, name:'流逝75%',itemStyle: {color:'#ED3333'}},
-                {value:0, name:'流逝50%',itemStyle: {color:'#FE9E00'}},
-                {value:46, name:'还好',itemStyle: {color:'#619505'}},
+                { 
+                  value : '黄单', xAxis: 1, yAxis: 4+24,
+                  itemStyle: {
+                    color:'#EDDC49'
+                  }
+                },
+                { 
+                  value : '青单', xAxis: 2, yAxis: 0+24,
+                  itemStyle: {
+                    color:'#72CB6F'
+                  }
+                },
+                { 
+                  value : '蓝单', xAxis: 3, yAxis: 46+24,
+                  itemStyle: {
+                    color:'#5FBDB7'
+                  }
+                },
+                ],
+                symbol:'pin',
+              },
+            }
             ]
-        }
-              ]
           });
       }
     }
@@ -155,7 +125,7 @@
         text-align: center;
         .h_today{
           color: #ffffff;
-          font-size: 15px;
+          font-size: 18px;
         }
         .h_event{
           color:rgb(173, 162, 150);

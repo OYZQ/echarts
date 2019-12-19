@@ -23,10 +23,11 @@ import bottom from './bottom.vue'
     .left{
         height: 85vh;
         box-sizing: border-box;
-        overflow: hidden;
         width: 25%;
         border:1px solid #01709B;
-        border-radius: 50px;
+        // border-radius: 50px;
         box-shadow: 0px 0px 20px rgb(37, 164, 214) inset; 
+        margin-left: 10px;
     }
+
 </style>

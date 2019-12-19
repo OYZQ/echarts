@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="c_top">
     <p class="t_today">事件剩余时间排序（55）</p>
-    <p class="t_event">Event time remaining sorting<p/>
+    <!-- <p class="t_event">Event time remaining sorting<p/> -->
     <p class="t_title"><span class="enent">事件号</span><span class="duty">责任人</span><span class="summary">摘要</span></p>
   </div>
 </template>
@@ -21,7 +21,7 @@
         text-align: center;
         .t_today{
           color: #fff;
-          font-size: 15px;
+          font-size: 18px;
         }
         .t_event{
           color:rgb(177, 167, 158);
@@ -29,6 +29,8 @@
         .t_title{
             text-align: center;
             display: flex;
+            margin-top: 10px;
+            font-size: 14px;
             .enent{
                 flex: 1;
             }

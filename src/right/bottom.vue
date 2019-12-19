@@ -1,9 +1,9 @@
 <template lang="html">
   <div class="r_bottom">
     <p class="b_today">今日SLA达标率</p>
-    <p class="b_event">SLA compliance rate today<p/>
+    <!-- <p class="b_event">SLA compliance rate today<p/> -->
     <div class="bcontent">
-      <div id="gaugeChart" :style="{width: '650px', height: '280px'}"></div>
+      <div id="gaugeChart" :style="{width: '830px', height: '330px'}"></div>
       <!-- <div class="ldiv">
         <div class="dleft">
           <p class="levent">今日产生且完成事件</p>
@@ -45,12 +45,6 @@
             tooltip : {
                 formatter: "{a} <br/>{b} : {c}%"
             },
-            toolbox: {
-                feature: {
-                    restore: {},
-                    saveAsImage: {}
-                }
-            },
             series: [
                 {
                     name: '业务指标',
@@ -59,6 +53,11 @@
                     data: [{value: 50}],
                     center: ['55%', '55%'],
                     radius: '75%',
+                    axisLine: {            // 坐标轴线  
+                     lineStyle: {       // 属性lineStyle控制线条样式  
+                         color: [[0.2, '#f5675d'], [0.8, '#5fbdb7'], [1, '#72CB6F']]
+                                }  
+                            },  
                 }
             ]
         });
@@ -72,17 +71,18 @@
         width: 100%;
         padding:10px;
         box-sizing: border-box;
-        height: 250px;
+        height: 280px;
         border:1px solid #01709B;
-        border-radius: 50px;
+        // border-radius: 50px;
         box-shadow: 0px 0px 20px rgb(37, 164, 214) inset; 
         .b_today{
-          color: #ffffff;
-          font-size: 15px;
           text-align: center;
+          font-size: 18px;
+          color: #ffffff;
+          // font-weight: 1000;
         }
         .b_event{
-          color:rgb(182, 171, 159);
+          color:#ffffff;
           text-align: center;
         }
         .bcontent{

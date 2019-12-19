@@ -1,16 +1,17 @@
 <template lang="html">
   <div class="l_bottom">
     <p class="b_today">人员待办事项执行情况</p>
-    <p class="b_event">Implementation of personnel to do items<p/>
     <div class="lbcontent">
       <div class="peopletitle">
         <div class="title1">人员</div>
         <div class="descruption">待办事件执行情况</div>
       </div>
-      <div class="detial" v-for="man in people">
-        <div class="bname">{{man.name}}</div>
-        <div class="start">
-          <i v-for="(item,index) in itemClasses(man.num)" :key="index" class="iconfont" :class="item"></i>
+      <div class="scroll">
+        <div class="detial" v-for="man in people">
+          <div class="bname">{{man.name}}</div>
+          <div class="start">
+            <i v-for="(item,index) in itemClasses(man.num)" :key="index" class="iconfont" :class="item"></i>
+          </div>
         </div>
       </div>
     </div>
@@ -32,7 +33,6 @@ const START = "icon-dian"
     },
     data(){
       return{
-        num:10,
         people:[]
       }
     },
@@ -59,8 +59,9 @@ const START = "icon-dian"
         padding:10px 10px;
         padding-bottom: 40px;
         .b_today{
-          color: #C2820F;
-          font-size: 15px;
+          color: #fff;
+          font-size: 18px;
+          text-align: center;
         }
         .b_event{
           color:#4A4540;
@@ -68,8 +69,8 @@ const START = "icon-dian"
         .lbcontent{
           .peopletitle{
             border-bottom:#919971 solid 2px;
-            font-size: 12px;
-            color: #9B9A90;
+            font-size: 14px;
+            color: #ffffff;
             margin-top: 10px;
             display: flex;
             text-align: center;
@@ -81,21 +82,29 @@ const START = "icon-dian"
               text-align: left;
             }
           }
-          .detial{
-            font-size: 12px;
-            color: #9B9A90;
-            text-align: center;
-            display: flex;
-            border-bottom: #616161 1px solid;
-            .bname{
-              flex: 1;
+          .scroll{
+            overflow-x: hidden;
+            overflow-y: scroll;
+            height: 29vh;
+            .detial{
+              font-size: 14px;
+              color: #ffffff;
+              text-align: center;
+              display: flex;
+              border-bottom: #616161 1px solid;
+              .bname{
+                flex: 1;
+              }
+              .start{
+                flex: 10;
+                text-align: left;
+                color: #1296DB;
+                line-height: 160%
+              }
             }
-            .start{
-              flex: 10;
-              text-align: left;
-              color: #1296DB;
-              line-height: 160%
-            }
+          }
+          .scroll::-webkit-scrollbar {
+            display: none;
           }
         }
     }

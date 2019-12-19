@@ -32,10 +32,14 @@
 </script>
 
 <style lang="scss">
+
     .c_content{
         color: #ffffff;
-        font-size: 12px;
+        font-size: 14px;
         box-sizing: border-box;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        height: 76vh;
         .infos{
             padding: 10px;
             box-sizing: border-box;
@@ -44,13 +48,13 @@
                 border-bottom: #393A3F solid 3px;
                 .id{
                     padding-left: 10px;
-                    color: #B9B9B9;
+                    color: rgb(243, 239, 239);
                     flex: 1;
                     // background:#383838;
                 }
                 .name{
                     padding-left: 10px;
-                    color: #1B7194;
+                    color: rgb(129, 211, 243);
                     flex:2;
                     // background:#303136;
                 }
@@ -74,5 +78,8 @@
                 }
             }
         }
+    }
+    .c_content::-webkit-scrollbar {
+        display: none;
     }
 </style>

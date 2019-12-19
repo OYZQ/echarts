@@ -20,12 +20,11 @@ import ccontent from './c_content.vue'
     .center{
         box-sizing: border-box;
         height: 85vh;
-        overflow: hidden;
-        background: #000B21;
         width: 25%;
         margin-right: 15px;
         border:1px solid #01709B;
-        border-radius: 50px;
+        // border-radius: 50px;
         box-shadow: 0px 0px 20px rgb(37, 164, 214) inset; 
+        padding-bottom: 20px;
     }
 </style>
